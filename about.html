@@ -1,0 +1,107 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMOOLID</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="about-container">
+    <body onscroll="handleScroll()" class="about-container">
+  <header>
+    <nav class="nav">
+      <ul>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="event.html" class="nav-link">Studio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class ="logo"> 
+    <a href="index.html">
+      <img src="logo.png" alt="Logo" class="logo-img" />
+    </a>
+  </div>
+
+  <div class="image-stack"> 
+    <img src = "find.svg" alt="Find" class="icons-img" />
+    <img src = "user.svg" alt="user" class="icons-img" />
+    <img src = "shopping.svg" alt="shopping" class="icons-img" />
+  </div>
+
+  <div class="about_main">
+    <img src = "about_main.png" alt="test" />
+  </div>
+
+  <!-- /*공백주려고만듦*/ -->
+  <section class="filler"> </section>
+  <!-- -------------- -->
+
+    <div class="intro">
+        <img src="timeline.png" alt="Timeline" class = "timeline" />
+        
+        <div class = "hover-group">
+             <img src= "Vector1.png" alt="Vector1" class="vector1-img" />
+                <div class="description1">
+                    <img src="about_01.png" alt="about_">
+                </div>
+        </div>
+
+        <div class="hover-group2">
+            <img src= "Vector2.png" alt="Vector2" class="vector2-img" />
+                <div class = "description2">
+                    <img src="about_02.png" alt="about_">
+                </div>
+        </div>
+        
+        <div class="hover-group3">
+            <img src= "Vector3.png" alt="Vector3" class="vector3-img" />
+            <div class = "description3">
+                <img src="about_03.png" alt="about_">
+            </div>
+        </div>
+        
+        <div class="hover-group4">
+            <img src= "Vector4.png" alt="Vector4" class="vector4-img" />
+            <div class = "description4">
+                <img src="about_04.png" alt="about_">
+            </div>
+        </div>
+        
+    </div>
+
+     <!-- /*공백주려고만듦*/ -->
+    <section class="filler"> </section>
+    <!-- -------------- -->
+
+    <div class="intro">
+        <img src= "Join Us.png" alt="joinus" class="joinus1-img" />
+        <img src= "Join Us2.png" alt="joinus2" class="joinus2-img" />
+        <img src= "Join Us3.png" alt="joinus3" class="joinus3-img" />
+        <img src= "Join Us4.png" alt="joinus4" class="joinus4-img" />
+        <img src= "vectorgroup.png" alt="vectorgroup" class="vectorgroup-img" />
+    </div>
+
+    <div>
+        <img src="info.png" alt = "info" class="info-img" />
+    </div>
+
+<script>
+  function handleScroll() {
+    const scrollY = window.scrollY;
+    const body = document.body;
+
+    if (scrollY > 300) {
+      body.style.backgroundColor = "#FAF9F7"; // 하얀색
+    } else {
+      body.style.backgroundColor = "#DCFF60"; // 원래 배경색
+    }
+  }
+</script>
+
+</body>
+</html>

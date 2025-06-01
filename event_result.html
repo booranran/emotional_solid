@@ -1,0 +1,59 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMOOLID</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="event/result.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="event.html" class="nav-link active">Studio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo.png" alt="Logo" class="logo-img" />
+        </a>
+    </div>
+
+    <div class="image-stack">
+        <img src="find.svg" alt="Find" class="icons-img" />
+        <img src="user.svg" alt="User" class="icons-img" />
+        <img src="shopping.svg" alt="Shopping" class="icons-img" />
+    </div>
+
+    <!-- loading section -->
+    <section class="result-wrapper">
+        <div class="result-container">
+            <p class="subtitle">당신이 요즘 느끼는 감정은...</p>
+            <h1 class="emotion-title" id="emotionTitle">조용히 번지는 연분홍 감정, 설렘</h1>
+    
+            <div class="emotion-icon-wrapper">
+                <img id="emotionIcon" src="emotion/flutter_icon.png" alt="감정 아이콘" />
+            </div>
+    
+            <button class="view-more-btn">자세히 보기</button>
+        </div>
+    </section>
+
+
+  <!-- js script -->
+<script type="module" src="event/event.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMOOLID</title>
+  <link rel="stylesheet" href="event/event.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="font.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css">
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <ul>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="event.html" class="nav-link active">Studio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="Logo" class="logo-img" />
+    </a>
+  </div>
+
+  <div class="image-stack">
+    <img src="find.svg" alt="Find" class="icons-img" />
+    <img src="user.svg" alt="User" class="icons-img" />
+    <img src="shopping.svg" alt="Shopping" class="icons-img" />
+  </div>
+
+  <!-- event section -->
+  <section class="quiz-section">
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar">
+        <img src="event/bar_icon.png" alt="icon" id="progress-icon" />
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <div id="question-wrapper">
+      <h2 class="question-number">Q1</h2>
+      <p class="question-text">아침에 눈을 떴을 때 가장 먼저 드는 생각은?</p>
+
+      <div class="options">
+        <button class="option-btn">오늘은 뭔가 좋은 일이 생길 것 같아!</button>
+        <button class="option-btn">평범하고 차분하게 시작해봐.</button>
+        <button class="option-btn">너무 일어나기 싫고 무기력하다.</button>
+        <button class="option-btn">또 반복되는 하루, 피곤하다.</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2nextpage -->
+
+  <div>
+    <a href="next_page.html" class="next-btn">
+      <img src="event/next_btn.png" alt="Next Button" />
+    </a>
+  </div>
+
+  <!-- js script -->
+  <script type="module" src="cursor.js"></script>
+  <script type="module" src="event/event.js" defer></script>
+
+</body>
+
+</html>

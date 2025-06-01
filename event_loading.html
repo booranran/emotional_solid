@@ -1,0 +1,57 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMOOLID</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="event/event.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="event.html" class="nav-link active">Event</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo.png" alt="Logo" class="logo-img" />
+        </a>
+    </div>
+
+    <div class="image-stack">
+        <img src="find.svg" alt="Find" class="icons-img" />
+        <img src="user.svg" alt="User" class="icons-img" />
+        <img src="shopping.svg" alt="Shopping" class="icons-img" />
+    </div>
+
+    <!-- loading section -->
+     <div class="loading-container">
+        <div class="pulse-orb"></div>
+        <p class="loading-text">내 감정의 물성 도출 중...</p>
+     </div>
+    
+
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const emotion = params.get("emotion");
+
+        setTimeout(() => {
+            window.location.href = `event_result.html?emotion=${encodeURIComponent(emotion)}`;
+        }, 3000); // 3초 대기
+    </script>
+</body>
+
+</html>

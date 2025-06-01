@@ -1,0 +1,488 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMOOLID</title>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-kopubworld@1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../shop.css">
+  <link rel="stylesheet" href="emotion_page.css">
+    <link rel="stylesheet" href="../font.css">
+</head>
+<body class="home">
+  <header>
+    <nav class="nav">
+      <ul>
+        <li><a href="../about.html" class="nav-link">About</a></li>
+        <li><a href="../shop.html" class="nav-link active">Shop</a></li>
+        <li><a href="../faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="../event.html" class="nav-link">Studio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="logo"> 
+    <a href="../index.html">
+      <img src="../logo.png" alt="Logo" class="logo-img" />
+    </a>
+  </div>
+
+  <div class="image-stack"> 
+    <img src="../find.svg" alt="Find" class="icons-img" />
+    <img src="../user.svg" alt="User" class="icons-img" />
+    <img src="../shopping.svg" alt="Shopping" class="icons-img" />
+  </div>
+
+  <!-- Product Section -->
+  <div class="product-container">
+    <div class="product-left">
+      <div class="preview-left">
+        <div class="thumbnails">
+          <img src="flutter_detatil1.svg" class="thumb active" onclick="changeImage(this, 'main-display')" />
+          <img src="flutter_detail2.svg" class="thumb" onclick="changeImage(this, 'main-display')" />
+          <img src="flutter_detail3.svg" class="thumb" onclick="changeImage(this, 'main-display')" />
+        </div>
+      </div>
+
+      <div class="main-image">
+        <img id="main-display" src="flutter_detatil1.svg" alt="메인 이미지" />
+        <div class="like">
+        </div>
+      </div>
+    </div>
+
+    <div class="product-detail">
+      <h2 class="product-name">설렘체 <span class="product-name-en">Flutter</span></h2>
+      <div class="product-price">25,000원</div>
+
+      <div class="delivery-info">
+        <p>배송비 <span class="delivery-cost">3,000원 (50,000원 이상 구매 시 무료)</span></p>
+        <p class="delivery-sub">제주 및 도서 산간 3,000원 추가</p>
+      </div>
+
+      <div class="quantity-box">
+        <span class="label">수량</span>
+        <div class="quantity-control">
+          <button class="quantity-btn">-</button>
+          <span class="quantity-value">1</span>
+          <button class="quantity-btn">+</button>
+        </div>
+      </div>
+
+      <div class="total-price-wrap">
+        <p class="total-label">총 상품금액 <span class="total-count">(1개)</span></p>
+        <p class="total-price">25,000원</p>
+      </div>
+
+      <div class="action-buttons">
+        <a href="#"><img src="buy_btn.png" alt="구매하기 버튼" class="button-img" /></a>
+        <a href="#"><img src="cart_btn.png" alt="장바구니 버튼" class="button-img" /></a>
+      </div>
+    </div>
+  </div>
+
+<!-- ------------------------------------------------- -->
+
+<div class="shop-category-nav2">
+    <ul>
+     <li><a href="#"><img src="shop_button_detail.png" alt="상세정보" /></a></li>
+      <li><a href="#">리뷰</a></li>
+      <li><a href="#">Q & A</a></li>
+    </ul>
+</div>
+
+<div class="texture-background">
+  <div class="texture-text" data-bg = "flutter_texture.png">
+    FLUTTER
+  </div>
+</div>
+
+<div class="pink-background">
+  <div class="detail-container">
+    <div class="icon-wrapper">
+      <img src="Flutter_background.png" alt="Flutter Background" class="background" />
+      <img src="flutter_icon.png" alt="Flutter Icon" class="icon" />
+    </div>
+  </div>
+
+  <div class="emotion-description">
+    <h2 class="emotion-title">설렘체</h2>
+    <p class="emotion-subtitle">Flutter</p>
+    <p class="emotion-text">
+      설렘체는 두근거리는 심장 박동에서 아이디어를 착안한 감정의 물성입니다.<br />
+      하트 모양의 감정은 매끄럽고 윤기나며, 미세한 입자가 모였다 흩어지는 흐름을 가집니다.<br />
+      전체적으로 높은 채도의 색이 가장자리를 따라 밝게 퍼지며, 순간적으로 밝아지는 파동이 특징입니다.<br />
+      이는 보는 이로 하여금 사랑을 처음 시작할 때와 비슷한 착각을 일으키게 만듭니다.
+    </p>
+  </div>
+</div>
+
+<div class="detail-section" data-bgcolor="#ffb1c7">
+  <div class="detail-left">
+    <h3 class="detail-title">Click to detail</h3>
+    <p class="detail-sub">버튼을 클릭하여<br>설렘체의 향, 맛, 사용시간에 대해 자세하게 알아보세요</p>
+
+    <div class="detail-buttons">
+      <img src="scent_off.png" alt="Scent Button" class="detail-btn" data-type="scent" onclick="changeDetail('scent', this)"/>
+      <img src="taste_off.png" alt="Taste Button" class="detail-btn" data-type="taste" onclick="changeDetail('taste', this)" />
+      <img src="hour_off.png" alt="Hour Button" class="detail-btn selected" data-type="hour" onclick="changeDetail('hour', this)"/>
+    </div>
+  </div>
+
+  <div class="detail-right">
+    <img id = "detail-image" src="flutter_explain.png" alt="시간 및 폐기 방법 설명" class="detail-img" />
+  </div>
+</div>
+
+<div class="Interectative-description">
+  <h2 class="Interectative-zone-title">Interactive Zone</h2>
+  <p class="Interectative-zone-text">감성의 물성을 360도로 구경해 보세요</p>
+</div>
+
+<div>
+  <div class="obj3d-container">
+    <img src="flutter_obj_background.png" alt="3D Object" class="background3d-img" />
+    <canvas id="canvas"></canvas>
+  </div>
+</div>
+
+<div class="background-container" data-bgcolor="#FFB1C7">
+  <div class="box-container">
+    <img src="flutter package.png" alt="Flutter Box" class="flutter-box" />
+  </div>
+  <div class="background-text-wrapper">
+    <div class="flutter-text flutter-1" data-txtcolor = "#cdaeff">FLUTTER</div>
+    <div class="flutter-text flutter-2" data-txtcolor = "#cdaeff">FLUTTER</div>
+    <div class="flutter-text flutter-3" data-txtcolor = "#cdaeff">FLUTTER</div>
+  </div>
+</div>
+
+<div class="how-to-use-container">
+  <h1 class="how-to-title">How to Use?</h1>
+  <img src="how2use.png" alt="How to Use" class="how-to-use" />
+</div>
+
+<!--caution -->
+<section class="caution-section">
+  <h2 class="caution-title">Caution</h2>
+  <p class="caution-subtitle">감정의 물성을 사용하기 전, 주의사항을 꼭 읽어주세요</p>
+
+  <div class="caution-cards">
+    <div class="caution-card">
+      <img src="flutter_buttons/caution 01 - deactivate.png" class="card-img" data-hover="flutter_buttons/caution 01 - activate.png" alt="감정 과잉 휘사 현상" />
+    </div>
+    <div class="caution-card">
+      <img src="flutter_buttons/caution 02 - deactivate.png" class="card-img" data-hover="flutter_buttons/caution 02 - activate.png" alt="현실 감각 저하" />
+    </div>
+    <div class="caution-card">
+      <img src="flutter_buttons/caution 03 - deactivate.png" class="card-img" data-hover="flutter_buttons/caution 03 - activate.png" alt="감정의 물성 변형" />
+    </div>
+  </div>
+</section>
+
+<div class="notive-container">
+  <img src="flutter_buttons/notice.png" alt="Notice" class="notive-img" />
+</div>
+
+<!-- ohter product -->
+<section class="product-section">
+  <h2 class="product-title">Products</h2>
+  <p class="product-subtitle">설렘체와 관련된 다른 감정들도 구경해 보세요</p>
+
+  <div class="product-list">
+    <a href="inspire.html" class="product-item">
+      <img src="product-background.png" alt="영감체 카드" class="product-bg" />
+      <img src="inspire_icon.png" alt="영감체 오브제" class="product-overlay" />
+
+      <div class="product-info">
+        <div class="other-product-name">
+          <span class="main-name">[감정의 물성] 영감체</span>
+          <span class="sub-name">Inspire</span>
+        </div>
+        <div class="product-price">25,000</div>
+      </div>
+    </a>
+
+    <a href="happiness.html" class="product-item">
+      <img src="product-background.png" alt="행복체 카드" class="product-bg" />
+      <img src="happiness_icon.png" alt="행복체 오브제" class="product-overlay" />
+
+      <div class="product-info">
+        <div class="other-product-name">
+          <span class="main-name">[감정의 물성] 행복체</span>
+          <span class="sub-name">Happiness</span>
+        </div>
+        <div class="product-price">25,000</div>
+      </div>
+    </a>
+
+    <a href="relex.html" class="product-item">
+      <img src="product-background.png" alt="편안체 카드" class="product-bg" />
+      <img src="relex/relex_icon.png" alt="편안체 오브제" class="product-overlay" />
+
+      <div class="product-info">
+        <div class="other-product-name">
+          <span class="main-name">[감정의 물성] 편안체</span>
+          <span class="sub-name">Relex</span>
+        </div>
+        <div class="product-price">25,000</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+    <div>
+        <img src="../info.png" alt = "info" class="footer-img" />
+    </div>
+
+
+  <!---------------- script -------------------------->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+    "GLTFLoader": "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js",
+    "OrbitControls": "https://unpkg.com/three@0.141.0/examples/jsm/controls/OrbitControls.js"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'GLTFLoader';
+import { OrbitControls } from 'OrbitControls';
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 1000);
+
+const renderer = new THREE.WebGLRenderer({
+  canvas: document.querySelector("#canvas"),
+  antialias: true,
+  alpha: true
+});
+renderer.setSize(1000, 1000);
+
+const light = new THREE.DirectionalLight(0xffffff, 1);
+light.position.set(0, 10, 10);
+scene.add(light);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.enableZoom = false;
+controls.enablePan = false;
+
+const loader = new GLTFLoader();
+loader.load('flutter_buttons/flutter_cm.gltf', (gltf) => {
+  const model = gltf.scene;
+
+  // ✅ 1. 스케일 먼저 적용
+  model.scale.set(2.0, 2.0, 2.0);
+
+  // ✅ 2. 박스 기준 중심 계산 (스케일 반영된 상태)
+  const box = new THREE.Box3().setFromObject(model);
+  const center = box.getCenter(new THREE.Vector3());
+  const size = box.getSize(new THREE.Vector3());
+
+  // ✅ 3. 중심을 원점으로 정렬
+  model.position.sub(center);
+
+  // ✅ 4. 씬에 추가
+  scene.add(model);
+
+  // ✅ 5. 카메라 위치 = 모델 크기에 비례한 거리
+  const distance = size.length() * 1.5;
+  camera.position.set(0, 0, 50);
+  camera.lookAt(0, 0, 0);
+
+  // ✅ 6. OrbitControls 기준 중심도 동일하게 맞추기
+  controls.target.set(0, 0, 0);
+  controls.update();
+
+  function animate() {
+    requestAnimationFrame(animate);
+    controls.update();
+    renderer.render(scene, camera);
+  }
+
+  animate();
+});
+</script>
+
+
+
+<script>
+
+
+  // 썸네일 클릭 → 이미지 바꾸기
+  function changeImage(element, targetID) {
+    const target = document.getElementById(targetID);
+    target.src = element.src;
+
+    // 기존 active 제거
+    document.querySelectorAll(".thumb").forEach(img => img.classList.remove("active"));
+
+    // 클릭된 썸네일 active 추가
+    element.classList.add("active");
+  }
+
+const textureText = document.querySelector('.texture-text');
+const bg = textureText.getAttribute('data-bg');
+textureText.style.setProperty('--bg-img', `url(${bg})`);
+
+// 📱💻 공통: 스크롤 시 배경 위치 아래 → 위로
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  const maxScroll = document.body.scrollHeight - window.innerHeight;
+
+  const scrollPercent = (scrollY / maxScroll) * 100;
+
+  // 🎯 아래 → 위 효과로 만들기 위해 100% → 0% 방향으로
+  const backgroundY = 100 - scrollPercent * 5;
+
+  textureText.style.backgroundPosition = `center ${backgroundY}%`;
+});
+
+
+// 모든 아이콘 래퍼에 대해 감시자 등록
+const iconWrappers = document.querySelectorAll('.icon-wrapper');
+
+// IntersectionObserver 설정
+const scrollObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    } else {
+      entry.target.classList.remove('active'); // ✅ 요소가 다시 사라지면 클래스 제거
+    }
+  });
+}, {
+  threshold: 0.5 // ✅ 0.9보다 0.5가 반응 더 자연스러움
+});
+
+// 요소마다 옵저버 연결
+iconWrappers.forEach(wrapper => {
+  scrollObserver.observe(wrapper);
+});
+
+iconWrappers.forEach(wrapper => scrollObserver.observe(wrapper));
+
+
+  // 상세 이미지 버튼 클릭 시 교체
+  function changeDetail(type, buttonElement) {
+  const imageMap = {
+    scent: {
+      on: 'scent_on.png',
+      off: 'scent_off.png'
+    },
+    taste: {
+      on: 'taste_on.png',
+      off: 'taste_off.png'
+    },
+    hour: {
+      on: 'hour_on.png',
+      off: 'hour_off.png'
+    }
+  };
+
+  // 1. 설명 이미지 변경
+  const detailImg = document.getElementById('detail-image');
+  const detailImageSrcMap = {
+    scent: 'flutter_scent_explain.png',
+    taste: 'flutter_taste_explain.png',
+    hour: 'flutter_explain.png'
+  };
+  detailImg.src = detailImageSrcMap[type];
+
+  // 2. 버튼 이미지 모두 초기화 (off로 되돌리기)
+  document.querySelectorAll('.detail-btn').forEach(btn => {
+    const btnType = btn.getAttribute('data-type');
+    btn.src = imageMap[btnType].off;
+    btn.classList.remove('selected');
+  });
+
+  // 3. 클릭된 버튼은 on 이미지로 바꾸기
+  buttonElement.src = imageMap[type].on;
+  buttonElement.classList.add('selected');
+}
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5 // 50% 이상 보이면 발동
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const f1 = document.querySelector(".flutter-1");
+    const f2 = document.querySelector(".flutter-2");
+    const f3 = document.querySelector(".flutter-3");
+
+    if (entry.isIntersecting) {
+      // 중앙 등장
+      f1.classList.remove("exit");
+      f1.classList.add("enter");
+      f2.classList.remove("exit");
+      f2.classList.add("enter");
+      f3.classList.remove("exit");
+      f3.classList.add("enter");
+    } else {
+      // 화면에서 사라짐 → 퇴장
+      f1.classList.remove("enter");
+      f1.classList.add("exit");
+      f2.classList.remove("enter");
+      f2.classList.add("exit");
+      f3.classList.remove("enter");
+      f3.classList.add("exit");
+    }
+  });
+}, options);
+
+observer.observe(document.querySelector(".box-container"));
+
+// 배경 색상 및 텍스트 변수 설정
+document.querySelectorAll('.detail-section, .background-container, .flutter-text').forEach(section => {
+  const color = section.getAttribute('data-bgcolor');
+  const txtcolor = section.getAttribute('data-txtcolor');
+  if (color) {
+    section.style.setProperty('--bg-color', color);
+  }
+  if (txtcolor) {
+    section.style.setProperty('--txt-color', txtcolor);
+  }
+  });
+
+  //주의 섹션 카드 이미지 변경
+  document.querySelectorAll('.card-img').forEach(img => {
+  const original = img.src;
+  const hover = img.getAttribute('data-hover');
+
+  let isHover = false;
+
+  // PC: hover 동작
+  if (!/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+    img.addEventListener('mouseenter', () => {
+      img.src = hover;
+    });
+    img.addEventListener('mouseleave', () => {
+      img.src = original;
+    });
+  } else {
+    // 모바일: 터치로 토글
+    img.addEventListener('click', () => {
+      isHover = !isHover;
+      img.src = isHover ? hover : original;
+    });
+  }
+
+  console.log('hover script loaded!');
+});
+
+
+
+</script>
+</body>
+</html>

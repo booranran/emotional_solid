@@ -1,0 +1,263 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMOOLID</title>
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-kopubworld@1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../shop.css">
+  <link rel="stylesheet" href="emotion_page.css">
+  <link rel="stylesheet" href="../font.css">
+</head>
+<body class="home">
+  <header>
+    <nav class="nav">
+      <ul>
+        <li><a href="../about.html" class="nav-link">About</a></li>
+        <li><a href="../shop.html" class="nav-link active">Shop</a></li>
+        <li><a href="../faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="../event.html" class="nav-link">Studio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="logo"> 
+    <a href="../index.html">
+      <img src="../logo.png" alt="Logo" class="logo-img" />
+    </a>
+  </div>
+
+  <div class="image-stack"> 
+    <img src="../find.svg" alt="Find" class="icons-img" />
+    <img src="../user.svg" alt="User" class="icons-img" />
+    <img src="../shopping.svg" alt="Shopping" class="icons-img" />
+  </div>
+
+  <!-- Product Section -->
+  <div class="product-container">
+    <div class="product-left">
+      <div class="preview-left">
+        <div class="thumbnails">
+          <img src="happiness/happiness_detail1.svg" class="thumb active" onclick="changeImage(this, 'main-display')" />
+          <img src="happiness/happiness_detail2.svg" class="thumb" onclick="changeImage(this, 'main-display')" />
+          <img src="happiness/happiness_detail3.svg" class="thumb" onclick="changeImage(this, 'main-display')" />
+        </div>
+      </div>
+
+      <div class="main-image">
+        <img id="main-display" src="happiness/happiness_detail1.svg" alt="메인 이미지" />
+        <div class="like">
+        </div>
+      </div>
+    </div>
+
+    <div class="product-detail">
+      <h2 class="product-name">행복체<span class="product-name-en">Irritation</span></h2>
+      <div class="product-price">25,000원</div>
+
+      <div class="delivery-info">
+        <p>배송비 <span class="delivery-cost">3,000원 (50,000원 이상 구매 시 무료)</span></p>
+        <p class="delivery-sub">제주 및 도서 산간 3,000원 추가</p>
+      </div>
+
+      <div class="quantity-box">
+        <span class="label">수량</span>
+        <div class="quantity-control">
+          <button class="quantity-btn">-</button>
+          <span class="quantity-value">1</span>
+          <button class="quantity-btn">+</button>
+        </div>
+      </div>
+
+      <div class="total-price-wrap">
+        <p class="total-label">총 상품금액 <span class="total-count">(1개)</span></p>
+        <p class="total-price">25,000원</p>
+      </div>
+
+      <div class="action-buttons">
+        <a href="#"><img src="buy_btn.png" alt="구매하기 버튼" class="button-img" /></a>
+        <a href="#"><img src="cart_btn.png" alt="장바구니 버튼" class="button-img" /></a>
+      </div>
+    </div>
+  </div>
+
+<!-- ------------------------------------------------- -->
+
+<div class="shop-category-nav2">
+    <ul>
+     <li><a href="#"><img src="shop_button_detail.png" alt="상세정보" /></a></li>
+      <li><a href="#">리뷰</a></li>
+      <li><a href="#">Q & A</a></li>
+    </ul>
+</div>
+
+<div class="texture-background">
+  <div class="long-texture-text" data-bg = "irritation/irritation_texture.png">
+    HAPPINESS
+  </div>
+</div>
+
+<div class="happiness-background">
+  <div class="detail-container">
+    <div class="icon-wrapper">
+      <img src="happiness/happiness_background.png" alt="happiness Background" class="background" />
+      <img src="happiness/happiness_icon2.png" alt="happiness Icon" class="icon" />
+    </div>
+  </div>
+
+  <div class="emotion-description">
+    <h2 class="emotion-title">행복체</h2>
+    <p class="emotion-subtitle">Hapiness</p>
+    <p class="emotion-text">
+      행복체는 꽃이 만개하는 모양을 표현한 감정의 물성입니다.<br />
+      형태는 부드럽고 포근한 곡선으로 이루어지며, 내부에서 은은한 광이 퍼져 나옵니다.<br />
+      밝고 긍정적인 노란 빛깔이 자연스럽게 그라데이션을 이루며, 따스한 빛을 머금은 듯한 질감을 가집니다.<br />
+      이는 보는 이로 하여금 행복감이 따뜻하게 채워지는 경험을 느끼게 합니다.
+    </p>
+  </div>
+</div>
+
+<div class="detail-section" data-bgcolor="#FFE8A9">
+  <div class="detail-left">
+    <h3 class="detail-title">Click to detail</h3>
+    <p class="detail-sub">버튼을 클릭하여<br>고요체의 향, 맛, 사용시간에 대해 자세하게 알아보세요</p>
+
+    <div class="detail-buttons">
+<img src="silence/scent-deactivate.png" alt="Scent Button" class="detail-btn" data-type="scent" data-on="silence/scent-activate.png"
+    data-off="silence/scent-deactivate.png" data-img="happiness/happiness_scent_explain.png" onclick="changeDetail(this)" />
+
+<img src="silence/taste-deactivate.png" alt="Taste Button" class="detail-btn" data-type="taste" data-on="silence/taste-activate.png"
+    data-off="silence/taste-deactivate.png" data-img="happiness/happiness_taste_explain.png" onclick="changeDetail(this)" />
+
+<img src="silence/hour-deactive.png" alt="Hour Button" class="detail-btn selected" data-type="hour"
+    data-on="silence/hour-active.png" data-off="silence/hour-deactive.png" data-img="happiness/happiness_hour_explain.png"
+    onclick="changeDetail(this)" />
+</div>
+
+  </div>
+
+  <div class="detail-right">
+    <img id = "detail-image" src="flutter_explain.png" alt="시간 및 폐기 방법 설명" class="detail-img" />
+  </div>
+</div>
+
+<div class="Interectative-description">
+  <h2 class="Interectative-zone-title">Interactive Zone</h2>
+  <p class="Interectative-zone-text">감성의 물성을 360도로 구경해 보세요</p>
+</div>
+
+<div>
+  <div class="obj3d-container" data-model="flutter_buttons/flutter_cm.gltf">
+    <img src="happiness/happiness_obj_background.png" alt="3D Object" class="background3d-img" />
+    <canvas id="canvas"></canvas>
+  </div>
+</div>
+
+<div class="background-container" data-bgcolor="#FFC3B2">
+  <div class="box-container">
+    <img src="happiness/happiness package.png" alt="Flutter Box" class="flutter-box" />
+  </div>
+  <div class="background-text-wrapper">
+    <div class="flutter-text flutter-1" data-txtcolor = "#FCFFC3">HAPPINESS</div>
+    <div class="flutter-text flutter-2" data-txtcolor = "#FCFFC3">HAPPINESS</div>
+    <div class="flutter-text flutter-3" data-txtcolor = "#FCFFC3">HAPPINESS</div>
+  </div>
+</div>
+
+<div class="how-to-use-container">
+  <h1 class="how-to-title">How to Use?</h1>
+  <img src="irritation/how2use.png" alt="How to Use" class="how-to-use" />
+</div>
+
+<!--caution -->
+<section class="caution-section">
+  <h2 class="caution-title">Caution</h2>
+  <p class="caution-subtitle">감정의 물성을 사용하기 전, 주의사항을 꼭 읽어주세요</p>
+
+  <div class="caution-cards">
+    <div class="caution-card">
+      <img src="happiness/caution 01 - deactivate.png" class="card-img" data-hover="happiness/caution 01 - activate.png" alt="감정 과잉 휘사 현상" />
+    </div>
+    <div class="caution-card">
+      <img src="happiness/caution 02 - deactivate.png" class="card-img" data-hover="happiness/caution 02 - activate.png" alt="현실 감각 저하" />
+    </div>
+    <div class="caution-card">
+      <img src="happiness/caution 03 - deactivate.png" class="card-img" data-hover="happiness/caution 03 - activate.png" alt="감정의 물성 변형" />
+    </div>
+  </div>
+</section>
+
+<div class="notive-container">
+  <img src="happiness/notice.png" alt="Notice" class="notive-img" />
+</div>
+
+<section class="product-section">
+  <h2 class="product-title">Products</h2>
+  <p class="product-subtitle">행복체와 관련된 다른 감정들도 구경해 보세요</p>
+
+  <div class="product-list">
+    <a href="flutter.html" class="product-item">
+      <img src="product-background.png" alt="행복체 카드" class="product-bg" />
+      <img src="flutter_front.png" alt="행복체 오브제" class="product-overlay" />
+      <div class="product-info">
+        <div class="other-product-name">
+          <span class="main-name">[감정의 물성] 설렘체</span>
+          <span class="sub-name">Flutter</span>
+        </div>
+        <div class="product-price">25,000</div>
+      </div>
+    </a>
+
+    <a href="inspire.html" class="product-item">
+      <img src="product-background.png" alt="영감체 카드" class="product-bg" />
+      <img src="inspire_icon.png" alt="영감체 오브제" class="product-overlay" />
+
+      <div class="product-info">
+        <div class="other-product-name">
+          <span class="main-name">[감정의 물성] 영감체</span>
+          <span class="sub-name">Inspire</span>
+        </div>
+        <div class="product-price">25,000</div>
+      </div>
+    </a>
+
+
+    <a href="relex.html" class="product-item">
+      <img src="product-background.png" alt="편안체 카드" class="product-bg" />
+      <img src="relex/relex_icon.png" alt="편안체 오브제" class="product-overlay" />
+
+      <div class="product-info">
+        <div class="other-product-name">
+          <span class="main-name">[감정의 물성] 편안체</span>
+          <span class="sub-name">Relex</span>
+        </div>
+        <div class="product-price">25,000</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+    <div>
+        <img src="../info.png" alt = "info" class="footer-img" />
+    </div>
+
+
+  <!---------------- script -------------------------->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+    "GLTFLoader": "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js",
+    "OrbitControls": "https://unpkg.com/three@0.141.0/examples/jsm/controls/OrbitControls.js"
+  }
+}
+</script>
+
+<script type="module" src="emotion_script.js"></script>
+
+</body>
+</html>

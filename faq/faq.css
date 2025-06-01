@@ -1,0 +1,137 @@
+
+
+.faq-section {
+  padding: 50px 0px;
+  text-align: center;
+  font-family: 'SF pro', sans-serif;
+  font-style: italic;
+  margin-top: 0 px;
+}
+
+.faq-title {
+  font-size: 48px;
+  font-weight: 800;
+  font-style: italic;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.faq-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.tab {
+  border: none;
+  background: none;
+  font-size: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  color: #949494;
+}
+
+.tab.active {
+  width: 110px;
+  height: auto;
+  padding: 0; /* 기본 패딩 제거 */
+}
+
+.tab.active img {
+  width: 100%;
+  height: auto;
+  display: block; /* inline 공간 없애기 */
+}
+
+/* noive detial */
+.notice-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notice-image-wrapper img {
+  width: 700px;
+  max-width: 90%;
+  height: auto;
+}
+
+/* page */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.page {
+  padding: 10px 14px;
+  border-radius: 50%;
+  border: 1.5px solid #ccc;
+  cursor: pointer;
+}
+
+.page.current {
+  background-color: #dfff4f;
+  box-shadow: 2px 2px 0 #000;
+  border-color: #000;
+}
+
+
+/* search bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+
+.search-bar img {
+  width: 28%;
+  height: auto;
+  display: block; /* inline 공간 없애기 */
+}
+
+/* page */
+
+.faq-category-nav {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.faq-category-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.faq-category-nav li {
+  font-family: "KoPub Dotum", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal; 
+}
+
+.faq-category-nav a {
+  text-decoration: none;
+  color: #555;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: color 0.2s ease;
+}
+
+.faq-category-nav a:hover {
+  color: #000;
+  font-weight: 600;
+}
+
+.faq-category-nav img {
+  height: 35px;
+  display: block;
+}

@@ -1,0 +1,391 @@
+/* --------------------- 기본 스타일 유지 --------------------- */
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #FAF9F7;
+  color: #111;
+
+}
+
+#custom-cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background-image: url('mouse.png');
+  background-size: cover;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+
+.about-container {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #DCFF60;
+  color: #111;
+  transition: background-color 0.5s ease;
+}
+
+/* ---------------cursor-------------- */
+#custom-cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background-image: url('mouse.png');
+  background-size: cover;
+  pointer-events: none;
+  z-index: 9999;
+  cursor: none;
+}
+
+
+
+/* --------------------- 네비게이션 --------------------- */
+
+.nav {
+  padding: 30px;
+  text-align: center;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #A19493;
+  font-weight: 400;
+  transition: color 0.2s ease;
+  font-family: "San Francisco", sans-serif;
+  letter-spacing: -3%;
+}
+
+.nav-link.active {
+  color: #412623;
+  font-weight: 700;
+  font-family: "San Francisco", sans-serif;
+  letter-spacing: -3%;
+}
+
+/* --------------------- 로고와 아이콘 --------------------- */
+
+.logo-img {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  width: 10%;
+}
+
+.image-stack {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 25px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.icons-img {
+  width: 20px;
+  height: auto;
+  display: block;
+}
+
+/* --------------------- 메인 이미지 --------------------- */
+
+.about_main{
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 40px;
+}
+.about_main img{
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  overflow: hidden;
+  transform: translate(50px, 0px);
+}
+
+/* 시작화면 */
+.hero{
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+
+.hero-img {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+}
+
+@keyframes fadeup {
+  0%{
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.icon_group{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  width: 90%;
+  opacity: 0;
+  animation: fadeup 0.6s ease-out 0.3s forwards;
+}
+
+
+/* --------------------- 타임라인 (Flex 구조) --------------------- */
+
+
+
+.nav-base {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.timeline {
+  position: relative;
+  width: 230px
+}
+
+/* --------------------- vecs --------------------- */
+.hover-group,
+.hover-group2,
+.hover-group3,
+.hover-group4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+.vector1-img {
+  position: absolute;
+  top: 240px;
+  right: 100px;
+  width: 100px;
+  z-index: 10;
+  transition: transform 0.4s ease;
+}
+
+
+.intro {
+  position: relative;
+  max-width: 1000px;
+  margin: 100px auto 0 auto;
+  text-align: center;
+}
+
+
+.description1 {
+  position: absolute;
+  top: 280px;
+  right: 100px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 5;
+  width: 300px;
+}
+
+.description1 img {
+  width: 130%;
+  height: auto;
+  display: block;
+}
+
+.hover-group:hover .description1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover-group:hover .vector1-img {
+  transform: translateX(110px) rotate(11deg);
+}
+
+/* ------------vec2------------- */
+
+.vector2-img {
+  position: absolute;
+  top: 530px;
+  left: 120px;
+  width: 100px;
+  z-index: 10;
+  transition: transform 0.4s ease;
+}
+
+.description2 {
+  position: absolute;
+  top: 600px;
+  left: 5px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 5;
+  width: 300px;
+}
+
+.description2 img {
+  width: 130%;
+  height: auto;
+  display: block;
+}
+
+.hover-group2:hover .description2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover-group2:hover .vector2-img {
+  transform: translateX(-140px) rotate(-11deg);
+}
+
+/* --------------------- vec3 --------------------- */
+.vector3-img {
+  position: absolute;
+  top: 900px;
+  right: 120px;
+  width: 100px;
+  z-index: 10;
+  transition: transform 0.4s ease;
+}
+
+.description3 {
+  position: absolute;
+  top: 945px;
+  right: 100px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 5;
+  width: 300px;
+}
+
+.description3 img {
+  width: 130%;
+  height: auto;
+  display: block;
+}
+
+.hover-group3:hover .description3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover-group3:hover .vector3-img {
+  transform: translateX(140px);
+}
+
+/* --------------------- vec4 --------------------- */
+.vector4-img {
+  position: absolute;
+  top: 1230px;
+  left: 120px;
+  width: 100px;
+  z-index: 10;
+  transition: transform 0.4s ease;
+}
+
+.description4 {
+  position: absolute;
+  top: 1290px;
+  left: 5px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 5;
+  width: 300px;
+}
+
+.description4 img {
+  width: 130%;
+  height: auto;
+  display: block;
+}
+
+.hover-group4:hover .description4 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover-group4:hover .vector4-img {
+  transform: translateX(-140px);
+}
+
+
+
+
+.filler{
+  height: 200px;
+}
+
+.joinus1-img {
+  position: absolute;
+  top: 40px;
+  right: 200px;
+  width: 220px;
+}
+
+.joinus2-img {
+  position: absolute;
+  top: 120px;
+  right: 110px;
+  width: 310px;
+}
+
+.joinus3-img {
+  position: absolute;
+  top: 180px;
+  right: 200px;
+  width: 220px;
+}
+
+.joinus4-img {
+  position: absolute;
+  top: 260px;
+  right: 320px;
+  width: 100px;
+}
+
+.vectorgroup-img {
+  position: absolute;
+  top: 0;
+  left: 80px;
+  width: 400px;
+}
+
+.info-img {
+  margin-top: 500px;
+  bottom: 0px;
+  width: 100%
+}
+
+.info-img4shopping {
+  margin-top: 0px;
+  bottom: 0px;
+  width: 100%;
+}

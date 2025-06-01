@@ -1,0 +1,263 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMOOLID</title>
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-kopubworld@1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../shop.css">
+  <link rel="stylesheet" href="emotion_page.css">
+  <link rel="stylesheet" href="../font.css">
+</head>
+<body class="home">
+  <header>
+    <nav class="nav">
+      <ul>
+        <li><a href="../about.html" class="nav-link">About</a></li>
+        <li><a href="../shop.html" class="nav-link active">Shop</a></li>
+        <li><a href="../faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="../event.html" class="nav-link">Studio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="logo"> 
+    <a href="../index.html">
+      <img src="../logo.png" alt="Logo" class="logo-img" />
+    </a>
+  </div>
+
+  <div class="image-stack"> 
+    <img src="../find.svg" alt="Find" class="icons-img" />
+    <img src="../user.svg" alt="User" class="icons-img" />
+    <img src="../shopping.svg" alt="Shopping" class="icons-img" />
+  </div>
+
+  <!-- Product Section -->
+  <div class="product-container">
+    <div class="product-left">
+      <div class="preview-left">
+        <div class="thumbnails">
+          <img src="fear/fear_detail1.svg" class="thumb active" onclick="changeImage(this, 'main-display')" />
+          <img src="fear/fear_detail2.svg" class="thumb" onclick="changeImage(this, 'main-display')" />
+          <img src="fear/fear_detail3.svg" class="thumb" onclick="changeImage(this, 'main-display')" />
+        </div>
+      </div>
+
+      <div class="main-image">
+        <img id="main-display" src="fear/fear_detail1.svg" alt="메인 이미지" />
+        <div class="like">
+        </div>
+      </div>
+    </div>
+
+    <div class="product-detail">
+      <h2 class="product-name">공포체<span class="product-name-en">Irritation</span></h2>
+      <div class="product-price">18,500원</div>
+
+      <div class="delivery-info">
+        <p>배송비 <span class="delivery-cost">3,000원 (50,000원 이상 구매 시 무료)</span></p>
+        <p class="delivery-sub">제주 및 도서 산간 3,000원 추가</p>
+      </div>
+
+      <div class="quantity-box">
+        <span class="label">수량</span>
+        <div class="quantity-control">
+          <button class="quantity-btn">-</button>
+          <span class="quantity-value">1</span>
+          <button class="quantity-btn">+</button>
+        </div>
+      </div>
+
+      <div class="total-price-wrap">
+        <p class="total-label">총 상품금액 <span class="total-count">(1개)</span></p>
+        <p class="total-price">18,500원</p>
+      </div>
+
+      <div class="action-buttons">
+        <a href="#"><img src="buy_btn.png" alt="구매하기 버튼" class="button-img" /></a>
+        <a href="#"><img src="cart_btn.png" alt="장바구니 버튼" class="button-img" /></a>
+      </div>
+    </div>
+  </div>
+
+<!-- ------------------------------------------------- -->
+
+<div class="shop-category-nav2">
+    <ul>
+     <li><a href="#"><img src="shop_button_detail.png" alt="상세정보" /></a></li>
+      <li><a href="#">리뷰</a></li>
+      <li><a href="#">Q & A</a></li>
+    </ul>
+</div>
+
+<div class="texture-background">
+  <div class="short-texture-text" data-bg = "fear/fear_texture.png">
+    FEAR
+  </div>
+</div>
+
+<div class="fear-background">
+  <div class="detail-container">
+    <div class="icon-wrapper">
+      <img src="fear/fear_background.png" alt="fear Background" class="background" />
+      <img src="fear/fear_icon2.png" alt="fear Icon" class="icon" />
+    </div>
+  </div>
+
+  <div class="emotion-description" data-theme="blue-theme">
+    <h2 class="emotion-title">공포체</h2>
+    <p class="emotion-subtitle">Fear</p>
+    <p class="emotion-text">
+      공포체는 우리를 바라보는 시선으로부터 기인한 감정의 물성입니다.<br />
+      눈 모양을 가진 형태는 정형화되지 않았고, 급작스럽게 확장되거나 수축합니다.<br />
+      스펙트럼처럼 다채로운 색감에서 갑작스러운 명도 대비가 나타나며, 반사보다 흡수에 가까운 질감을 지닙니다.<br />
+      이는 보는 이로 하여금 예측할 수 없는 공포감을 남깁니다.
+    </p>
+  </div>
+</div>
+
+<div class="detail-section" data-bgcolor="#3F46C9">
+  <div class="detail-left" data-theme="blue-theme">
+    <h3 class="detail-title">Click to detail</h3>
+    <p class="detail-sub">버튼을 클릭하여<br>고요체의 향, 맛, 사용시간에 대해 자세하게 알아보세요</p>
+
+    <div class="detail-buttons">
+<img src="silence/scent-deactivate.png" alt="Scent Button" class="detail-btn" data-type="scent" data-on="silence/scent-activate.png"
+    data-off="silence/scent-deactivate.png" data-img="fear/fear_scent_explain.png" onclick="changeDetail(this)" />
+
+<img src="silence/taste-deactivate.png" alt="Taste Button" class="detail-btn" data-type="taste" data-on="silence/taste-activate.png"
+    data-off="silence/taste-deactivate.png" data-img="fear/fear_taste_explain.png" onclick="changeDetail(this)" />
+
+<img src="silence/hour-deactive.png" alt="Hour Button" class="detail-btn selected" data-type="hour"
+    data-on="silence/hour-active.png" data-off="silence/hour-deactive.png" data-img="fear/fear_hour_explain.png"
+    onclick="changeDetail(this)" />
+</div>
+
+  </div>
+
+  <div class="detail-right">
+    <img id = "detail-image" src="flutter_explain.png" alt="시간 및 폐기 방법 설명" class="detail-img" />
+  </div>
+</div>
+
+<div class="Interectative-description">
+  <h2 class="Interectative-zone-title">Interactive Zone</h2>
+  <p class="Interectative-zone-text">감성의 물성을 360도로 구경해 보세요</p>
+</div>
+
+<div>
+  <div class="obj3d-container" data-model="flutter_buttons/flutter_cm.gltf">
+    <img src="irritation/irritation_obj_background.png" alt="3D Object" class="background3d-img" />
+    <canvas id="canvas"></canvas>
+  </div>
+</div>
+
+<div class="background-container" data-bgcolor="#5B4BC3">
+  <div class="box-container">
+    <img src="irritation/irritation package.png" alt="Flutter Box" class="flutter-box" />
+  </div>
+  <div class="background-text-wrapper">
+    <div class="flutter-text flutter-1" data-txtcolor = "#B55753">IRRITATION</div>
+    <div class="flutter-text flutter-2" data-txtcolor = "#B55753">IRRITATION</div>
+    <div class="flutter-text flutter-3" data-txtcolor = "#B55753">IRRITATION</div>
+  </div>
+</div>
+
+<div class="how-to-use-container">
+  <h1 class="how-to-title">How to Use?</h1>
+  <img src="irritation/how2use.png" alt="How to Use" class="how-to-use" />
+</div>
+
+<!--caution -->
+<section class="caution-section">
+  <h2 class="caution-title">Caution</h2>
+  <p class="caution-subtitle">감정의 물성을 사용하기 전, 주의사항을 꼭 읽어주세요</p>
+
+  <div class="caution-cards">
+    <div class="caution-card">
+      <img src="fear/caution 01 - deactivate.png" class="card-img" data-hover="fear/caution 01 - activate.png" alt="감정 과잉 휘사 현상" />
+    </div>
+    <div class="caution-card">
+      <img src="fear/caution 02 - deactivate.png" class="card-img" data-hover="fear/caution 02 - activate.png" alt="현실 감각 저하" />
+    </div>
+    <div class="caution-card">
+      <img src="fear/caution 03 - deactivate.png" class="card-img" data-hover="fear/caution 03 - activate.png" alt="감정의 물성 변형" />
+    </div>
+  </div>
+</section>
+
+<div class="notive-container">
+  <img src="irritation/notice.png" alt="Notice" class="notive-img" />
+</div>
+
+<section class="product-section">
+  <h2 class="product-title">Products</h2>
+  <p class="product-subtitle">공포체와 관련된 다른 감정들도 구경해 보세요</p>
+
+  <div class="product-list">
+      <a href="inspire.html" class="product-item">
+      <img src="product-background.png" alt="공허체 카드" class="product-bg" />
+      <img src="void/void_icon.png" alt="공허체 오브제" class="product-overlay" />
+
+      <div class="product-info">
+        <div class="other-product-name">
+          <span class="main-name">[감정의 물성] 공허체</span>
+          <span class="sub-name">Void</span>
+        </div>
+        <div class="product-price">18,500</div>
+      </div>
+    </a>
+
+    <a href="anxiety.html" class="product-item">
+      <img src="product-background.png" alt="불안체 카드" class="product-bg" />
+      <img src="anxiety/anxiety_icon.png" alt="불안체 오브제" class="product-overlay" />
+
+      <div class="product-info">
+        <div class="other-product-name">
+          <span class="main-name">[감정의 물성] 불안체</span>
+          <span class="sub-name">Anxiety</span>
+        </div>
+        <div class="product-price">18,500</div>
+      </div>
+    </a>
+
+    <a href="blue.html" class="product-item">
+      <img src="product-background.png" alt="우울체 카드" class="product-bg" />
+      <img src="blue/blue_icon.png" alt="우울체 오브제" class="product-overlay" />
+
+      <div class="product-info">
+        <div class="other-product-name">
+          <span class="main-name">[감정의 물성] 우울체</span>
+          <span class="sub-name">Blue</span>
+        </div>
+        <div class="product-price">18,500</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+    <div>
+        <img src="../info.png" alt = "info" class="footer-img" />
+    </div>
+
+
+  <!---------------- script -------------------------->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+    "GLTFLoader": "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js",
+    "OrbitControls": "https://unpkg.com/three@0.141.0/examples/jsm/controls/OrbitControls.js"
+  }
+}
+</script>
+
+<script type="module" src="emotion_script.js"></script>
+
+</body>
+</html>
