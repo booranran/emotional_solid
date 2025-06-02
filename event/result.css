@@ -1,10 +1,10 @@
 .result-wrapper {
   height: 100vh;
-  background: #fbfbf9;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "KoPub Dotum", sans-serif;
+  padding-top: 6%;
 }
 
 .result-container {
@@ -13,6 +13,22 @@
   align-items: center;
   text-align: center;
   transform: translateY(-100px);
+}
+
+.result-bg{
+  position: fixed;   /* 스크롤해도 고정 */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;       /* 다른 요소보다 뒤에 */
+  overflow: hidden;
+}
+
+#emotionBg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 배경처럼 꽉 차게 */
 }
 
 .subtitle {
@@ -24,20 +40,39 @@
 .emotion-title {
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   color: #333;
   line-height: 1.4;
 }
 
 .emotion-icon-wrapper {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+
 .emotion-icon-wrapper img {
-  width: 180px;
+  width: 250px;
   height: auto;
   animation: fadeIn 1.2s ease-in-out;
 }
+
+.emotion-boundary {
+  position: relative;
+  width: 400px;  /* 배경 사이즈 조정 가능 */
+  height: 400Px;
+  z-index: 9999;
+  background-image: url('../event/emotion_boundary.png'); /* 배경 이미지 경로 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .view-more-btn {
   background: #dfff4f;
@@ -51,10 +86,15 @@
   color: #000;
 }
 
+.view-more-btn a{
+  text-decoration: none;
+}
+
 .view-more-btn:hover {
   transform: scale(1.05);
   background: #f2ff91;
 }
+
 
 @keyframes fadeIn {
   from {
@@ -66,3 +106,286 @@
     transform: translateY(0);
   }
 }
+
+/* event result detail */
+
+.result-detail-wrapper {
+  position: relative;
+  width: 90%;
+  height: 100vh; /* 화면 전체 높이 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.result-background {
+  position: absolute;
+  top: 35%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  height: auto;
+  z-index: 0;
+}
+
+.result-background-particles {
+  position: absolute;
+  top: 35%;
+  left: 55%;
+  transform: translate(-55%, -55%);
+  max-width: 90%;
+  height: auto;
+  z-index: 5;
+}
+
+.left-bg-mask {
+  position: absolute;
+  width: 30.5vw;
+  height: 35.4vw;
+  top: 7.9%; /* 원하는 위치 */
+  left: 10.15%;
+  z-index: 2; /* .result-content 보다 낮거나 높게 조정 */
+  border-radius: 10px 0px 0px 10px;
+  overflow: hidden;
+}
+
+.left-bg-mask img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 10;
+}
+
+
+#emotion-icon-overlay {
+  position: absolute;
+  top: 10%;  /* 조절 가능 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;  /* 하트 아이콘 사이즈 */
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+  object-fit: contain;
+max-height: 100%;
+}
+
+
+
+.result-content {
+  position: relative;
+  z-index: 10;
+  /* 필요 시 중앙 정렬용 스타일 추가 */
+  text-align: left;
+  left: 22%;
+  color: #412623;
+  bottom: 13%;
+  
+  width: 500px;
+  max-height: 380px;      /* 원하는 높이로 조절 */
+  overflow-y: auto;       /* 세로 스크롤바 생성 */
+  padding-right: 12px;    /* 스크롤바랑 글자 안 붙게 */
+  -webkit-overflow-scrolling: touch;
+
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+
+  display: flex;
+  flex-direction: column;
+  
+
+
+}
+
+.result-content::-webkit-scrollbar {
+  width: 15px;
+  
+}
+
+.result-content::-webkit-scrollbar-track {
+  background: #fff;
+  border: 1px solid #3f2a21; /* 갈색 테두리 */
+  border-radius: 999px;
+  
+}
+
+
+.result-content::-webkit-scrollbar-thumb {
+  background: #ecff6b; /* 형광 연두 */
+  border-radius: 999px;
+  border: 1px solid #3f2a21; /* thumb에도 테두리 */
+}
+
+
+.emotion-intro{
+  font-family: 'KoPub Dotum';
+  font-weight: 300;
+  letter-spacing: -3%;
+  color: #412623;
+  margin-bottom: 13px;
+}
+
+#emotion-title{
+  margin-top: 0px;
+  font-family: 'KoPub Dotum';
+  margin-bottom: 10px;
+}
+
+#emotion-detail, #emotion-detail2{
+  line-height: 1.8;
+  margin-bottom: 3%;
+  font-weight: 200;
+  letter-spacing: -3%;
+}
+
+#emotoin-match{
+  font-family: 'KoPub Dotum';
+}
+
+
+#emotion-match {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #412623;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1em;
+  margin-bottom: 5x;
+}
+
+.highlight-icon-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.highlight-text {
+  background: linear-gradient(180deg, var(--highlight-color), var(--highlight-color));
+  color: white;
+  padding: 0.001em 0.001em;
+  font-weight: 900;
+  font-size: 1.7rem;
+  display: inline-block;
+  line-height: 1;
+}
+
+.highlight-word{
+  color: var(--highlight-color);
+  font-weight: 600;
+  letter-spacing: -3%;
+}
+
+.highlight-icon-img2{
+  position: absolute;
+  top: 7%; /* 조정 가능 */
+  left: 62%;
+  transform: translateX(-50%);
+  width: 13px;
+  height: 13px;
+  object-fit: contain;
+}
+
+.emotion_box_wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 24px;
+  justify-content: flex-start;
+  margin-left: 0;
+  margin-bottom: 30px;
+
+}
+
+.emotion-group{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.emotion-box-row{
+  display: flex;
+  gap: 8px;
+}
+
+
+.group-label{
+  font-weight: 600;
+  font-size: 15px;
+  color: #412623;
+  margin-bottom: 4px;
+  text-align: center;
+  letter-spacing: -3%;
+}
+
+
+.emotion-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+
+.emotion-shape {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 10px 10px 10px;
+  border: 0.9px solid #412623;
+  
+}
+
+.emotion-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+
+.emotion-name {
+  font-size: 14px;
+  color: #412623;
+}
+
+/* -------------------- */
+
+.button-row {
+
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding-bottom: 60px; /* 여유 주기 */
+  z-index: 999;
+  margin-top: -22%;
+  position: relative;
+  
+}
+
+.button-row button {
+  padding: 13px 30px;
+  border-radius: 999px;
+  border: 1px solid #442623;
+  background: white;
+  color: #442623;
+  font-size: 1rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 14px;
+}
+
+.button-row button:hover {
+  background: #dfff4f;
+}
+
+
+
+

@@ -1,0 +1,120 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMOOLID</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="event/result.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="event.html" class="nav-link active">Studio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo.png" alt="Logo" class="logo-img" />
+        </a>
+    </div>
+
+    <div class="image-stack">
+        <img src="find.svg" alt="Find" class="icons-img" />
+        <img src="user.svg" alt="User" class="icons-img" />
+        <img src="shopping.svg" alt="Shopping" class="icons-img" />
+    </div>
+
+    <!-- loading section -->
+    <section class="result-detail-wrapper">
+        
+        <img src="event/background_particles.png" class="result-background-particles">
+    
+        <img src="event/detail_background.png" class="result-background" alt="감정 배경">
+    
+    
+        <div class="left-bg-mask">
+            <img id="emotion-bg" src="" alt="emotion_background">
+            <img id="emotion-icon-overlay" class="emotion-icon-overlay" src="" alt="감정 아이콘">
+        </div>
+    
+    
+        <div class="result-content">
+            <p class="emotion-intro">당신이 요즘 느끼는 감정은...</p>
+            <h2 id="emotion-title"></h2>
+            <p id="emotion-detail"></p>
+            <h2 id="emotion-match"></h2>
+            <p id="emotion-detail2"></p>
+    
+    
+    
+            <div class="emotion_box_wrapper">
+                <div class="emotion-group">
+                    <p class="group-label">비슷한 유형의 감정</p>
+                    <div class="emotion-box-row">
+                        <div class="emotion-box">
+                            <div id="similar-shape-1" class="emotion-shape">
+                                <img id="similar-icon-1" class="emotion-icon" src="">
+                            </div>
+                            <p id="similar-name-1" class="emotion-name"></p>
+                        </div>
+                        
+                        <div class="emotion-box">
+                            <div id="similar-shape-2" class="emotion-shape">
+                                <img id="similar-icon-2" class="emotion-icon" src="">
+                            </div>
+                            <p id="similar-name-2" class="emotion-name"></p>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+
+                <div class="emotion-group">
+                    <p class="group-label">다른 유형의 감정</p>
+                    <div class="emotion-box-row">
+                        <div class="emotion-box">
+                            <div id="different-shape-1" class="emotion-shape">
+                                <img id="different-icon-1" class="emotion-icon" src="">
+                            </div>
+                            <p id="different-name-1" class="emotion-name"></p>
+                        </div>
+                        
+                        
+                        <div class="emotion-box">
+                            <div id="different-shape-2" class="emotion-shape">
+                                <img id="different-icon-2" class="emotion-icon" src="">
+                            </div>
+                            <p id="different-name-2" class="emotion-name"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="button-row">
+        <a href="#"><button>공유하기</button></a>
+        <a href="all_result.html"><button>모든 결과 유형 보기</button></a>
+        <button>감정 합성하기</button>
+    </div>
+
+
+
+<!-- js script -->
+<script type="module" src="event/event_result_detail.js" defer></script>
+
+</body>
+
+</html>

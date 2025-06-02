@@ -135,20 +135,25 @@
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4열 정렬 */
-  gap: 40px;
-  max-width: 1200px;
+  gap: 0px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 60px 20px;
 }
 
 .product-item {
-  width: 100%;               /* 각 셀의 전체 너비 사용 */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  flex-direction: column;  /* 위아래로 배치 */
+  justify-content: center; /* 세로 중앙 */
+  align-items: center;     /* 가로 중앙 */
+  height: 100%;           /* 세로 높이 명시 (필수!) */
   box-sizing: border-box;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 30px;
 }
+
 
 .product-img {
   width: 100%;               /* grid 셀 안에 꽉 차게 */
