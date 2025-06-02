@@ -11,11 +11,17 @@ const renderer = new THREE.WebGLRenderer({
   antialias: true,
   alpha: true
 });
-renderer.setSize(1000, 1000);
 
-const light = new THREE.DirectionalLight(0xffffff, 1);
-light.position.set(0, 10, 10);
-scene.add(light);
+
+renderer.setSize(570, 570);
+
+const ambient = new THREE.AmbientLight(0xffffff, 1.0);
+const hemi = new THREE.HemisphereLight(0xffffff, 0.1 );
+const directional = new THREE.DirectionalLight(0xffffff, 0.2);
+directional.position.set(10, 10, 10);
+
+scene.add(ambient);
+
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
@@ -26,11 +32,21 @@ const container = document.querySelector('.obj3d-container');
 const modelPath = container?.getAttribute('data-model');
 
 const loader = new GLTFLoader();
-loader.load(modelPath, (gltf) => {
-  const model = gltf.scene;
+loader.load(modelPath, (glb) => {
+  const model = glb.scene;
+
+  console.log("✅ 모델 로드 성공:", model);
+  console.log("🔍 모델 구조:");
+  model.traverse((child) => {
+    if (child.isMesh) {
+      console.log(`- Mesh: ${child.name}, Material:`, child.material);
+    }
+  });
+
+
 
   // ✅ 1. 스케일 먼저 적용
-  model.scale.set(2.0, 2.0, 2.0);
+  model.scale.set(0.03, 0.03, 0.03);
 
   // ✅ 2. 박스 기준 중심 계산 (스케일 반영된 상태)
   const box = new THREE.Box3().setFromObject(model);

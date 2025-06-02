@@ -247,6 +247,7 @@
     "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
     "GLTFLoader": "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js",
     "OrbitControls": "https://unpkg.com/three@0.141.0/examples/jsm/controls/OrbitControls.js"
+    
   }
 }
 </script>
@@ -264,11 +265,16 @@ const renderer = new THREE.WebGLRenderer({
   antialias: true,
   alpha: true
 });
-renderer.setSize(1000, 1000);
 
-const light = new THREE.DirectionalLight(0xffffff, 1);
-light.position.set(0, 10, 10);
-scene.add(light);
+renderer.setSize(570, 570);
+
+const ambient = new THREE.AmbientLight(0xffffff, 1.0);
+const hemi = new THREE.HemisphereLight(0xffffff, 0.1 );
+const directional = new THREE.DirectionalLight(0xffffff, 0.2);
+directional.position.set(10, 10, 10);
+
+scene.add(ambient);
+
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
@@ -276,11 +282,11 @@ controls.enableZoom = false;
 controls.enablePan = false;
 
 const loader = new GLTFLoader();
-loader.load('flutter_buttons/flutter_cm.gltf', (gltf) => {
-  const model = gltf.scene;
+loader.load('inspire/inspire.glb', (glb) => {
+  const model = glb.scene;
 
   // ✅ 1. 스케일 먼저 적용
-  model.scale.set(2.0, 2.0, 2.0);
+  model.scale.set(0.03, 0.03, 0.03);
 
   // ✅ 2. 박스 기준 중심 계산 (스케일 반영된 상태)
   const box = new THREE.Box3().setFromObject(model);
@@ -309,7 +315,19 @@ loader.load('flutter_buttons/flutter_cm.gltf', (gltf) => {
   }
 
   animate();
-});
+},
+
+(xhr) => {
+    console.log(`📦 로딩 중: ${(xhr.loaded / xhr.total) * 100}% 완료`);
+  },
+
+  // 로딩 실패
+  (error) => {
+    console.error('❌ GLB 로드 실패:', error);
+  }
+
+
+);
 </script>
 
 

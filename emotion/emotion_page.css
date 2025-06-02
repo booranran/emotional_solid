@@ -570,6 +570,7 @@
   height: 1000px;
   margin: 0 auto;
   overflow: visible;
+  z-index: 1;
 }
 
 .background3d-img {
@@ -584,11 +585,12 @@
 
 #canvas {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
+  top: 24%;
+  left: 24%;
+  z-index: 12;
   width: 100%;
   height: 100%;
+
 }
 
 
