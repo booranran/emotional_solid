@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     행복체:{
         icon: 'emotion/happiness/flat_icon.png',
+        wholebg: "emotion/happiness/whole_background.png",
         bg: 'event/bg/happiness_bg.png',
         highlightColor: "#FFDD54",
         title: '따스한 온도로 퍼져나가는 감정, 행복체',
@@ -63,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     편안체:{
         icon: 'emotion/relex/flat_icon.png',
         bg: 'event/bg/relex_bg.png',
+        wholebg: "emotion/relex/whole_background.png",
         highlightColor: "#56CFAC",
         title: '포근하게 나를 감싸는 감정, 편안체',
         detail:`  
@@ -86,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     영감체:{
         icon: 'emotion/inspire/flat_icon.png',
         bg: 'event/bg/inspire_bg.png',
+        wholebg: "emotion/inspire/whole_background.png",
         highlightColor: "#B390FF",
         title: '빛처럼 번쩍이며 발산하는 감정, 영감체',
         detail:`  
@@ -109,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     고요체:{
         icon: 'emotion/silence/flat_icon.png',
         bg: 'event/bg/silence_bg.png',
+        wholebg: "emotion/silence/whole_background.png",
         highlightColor: "#78BFFE",
         title: '차분하면서도 동요하지 않는 감정, 고요체',
         detail:`  
@@ -131,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     예민체:{
         icon: 'emotion/sensitive/flat_icon.png',
+        wholebg: "emotion/sensitive/whole_background.png",
         bg: 'event/bg/sensitive_bg.png',
         highlightColor: "#77CA93",
         title: '남들보다 독특하고 섬세한 감정, 예민체',
@@ -153,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     침착체:{
         icon: 'emotion/calmness/flat_icon.png',
+        wholebg: "emotion/calmness/whole_background.png",
         bg: 'event/bg/calmness_bg.png',
         highlightColor: "#78B2FE",
         title: '내면에 고요한 흐름을 가진 감정, 침착체',
@@ -175,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     집중체:{
         icon: 'emotion/focus/flat_icon.png',
+        wholebg: "emotion/focus/whole_background.png",
         bg: 'event/bg/focus_bg.png',
         highlightColor: "#9FCD33",
         title: '한 지점을 향해 쏟아내는 감정, 집중체',
@@ -198,6 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     공허체:{
         icon: 'emotion/void/flat_icon.png',
+        wholebg: "emotion/void/whole_background.png",
         bg: 'event/bg/void_bg.png',
         highlightColor: "#7D66FF",
         title: '텅 빈 채로 외로운 감정, 공허체',
@@ -220,6 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     공포체:{
         icon: 'emotion/fear/flat_icon.png',
+        wholebg: "emotion/fear/whole_background.png",
         bg: 'event/bg/fear_bg.png',
         highlightColor: "#A83CD7",
         title: '오싹거리며 소름이 돋는 감정, 공포체',
@@ -242,6 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     우울체:{
         icon: 'emotion/blue/flat_icon.png',
+        wholebg: "emotion/blue/whole_background.png",
         bg: 'event/bg/blue_bg.png',
         highlightColor: "#5E78E8",
         title: '심해 속으로 깊이 가라앉는 감정, 우울체',
@@ -263,6 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     불안체:{
         icon: 'emotion/anxiety/flat_icon.png',
+        wholebg: "emotion/anxiety/whole_background.png",
         bg: 'event/bg/anxiety_bg.png',
         highlightColor: "#E57CFF",
         title: '흔들리며 위태로운 감정, 불안체',
@@ -286,6 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     증오체:{
         icon: 'emotion/hate/flat_icon.png',
+        wholebg: "emotion/hate/whole_background.png",
         bg: 'event/bg/hate_bg.png',
         highlightColor: "#FFBB3E",
         title: '단 하나를 향해 타오르는 감정, 증오체',
@@ -308,6 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     분노체:{
         icon: 'emotion/anger/flat_icon.png',
+        wholebg: "emotion/anger/whole_background.png",
         bg: 'event/bg/anger_bg.png',
         highlightColor: "#FF6E3A",
         title: '폭발하듯 끓어오르는 감정, 분노체',
@@ -330,6 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     짜증체:{
         icon: 'emotion/irritation/flat_icon.png',
+        wholebg: "emotion/irritation/whole_background.png",
         bg: 'event/bg/irritation_bg.png',
         highlightColor: "#FF5AAC",
         title: '삐죽삐죽 가시가 돋은 감정, 짜증체',
@@ -351,6 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     갈등체:{
         icon: 'emotion/discord/flat_icon.png',
+        wholebg: "emotion/discord/whole_background.png",
         bg: 'event/bg/discord_bg.png',
         highlightColor: "#FF56DD",
         title: '양 옆에서 격렬하게 부딪하는 감정, 갈등체',
