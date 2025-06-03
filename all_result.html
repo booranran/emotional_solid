@@ -40,100 +40,68 @@
 
 
     <div class="product-grid">
-        <div class="product-item">
-            <a href="emotion/flutter.html">
+        <div class="product-item" data-emotion="설렘체">
                 <img src="emotion/flutter_buttons/flutter_result.png" alt="flutter" class="product-img" />
-            </a>
         </div>
 
-        <div class="product-item">
-            <a href="emotion/happiness.html">
+        <div class="product-item" data-emotion="행복체">
                 <img src="emotion/happiness/happiness_result.png" alt="happiness" class="product-img" />
-            </a>
         </div>
 
-        <div class="product-item">
-            <a href="emotion/relex.html">
+        <div class="product-item" data-emotion="편안체">
                 <img src="emotion/relex/relax_result.png" alt="relex" class="product-img" />
-            </a>
         </div>
 
-        <div class="product-item">
-            <a href="emotion/inspire.html">
+        <div class="product-item" data-emotion="영감체">
                 <img src="emotion/inspire/inspire_result.png" alt="inspire" class="product-img" />
-            </a>
         </div>
 
-        <div class="product-item">
-            <a href="emotion/silence.html">
+        <div class="product-item" data-emotion="고요체">
                 <img src="emotion/silence/silence_result.png" alt="silence" class="product-img" />
-            </a>
         </div>
 
-        <div class="product-item">
-            <a href="emotion/sensitive.html">
+        <div class="product-item" data-emotion="예민체"> 
                 <img src="emotion/sensitive/sensitive_result.png" alt="sensitive" class="product-img" />
-            </a>
         </div>
 
-        <div class="product-item">
-            <a href="emotion/calmness.html">
+        <div class="product-item" data-emotion="침착체">
                 <img src="emotion/calmness/calmness_result.png" alt="calmness" class="product-img" />
-            </a>
         </div>
 
-        <div class="product-item">
-            <a href="emotion/focus.html">
+        <div class="product-item" data-emotion="집중체">
                 <img src="emotion/focus/focus_result.png" alt="focus" class="product-img" />
-            </a>
         </div>
 
-        <div class="product-item">
-            <a href="emotion/void.html">
+        <div class="product-item" data-emotion="공허체">
                 <img src="emotion/void/void_result.png" alt="void" class="product-img" />
-            </a>
         </div>
 
-        <div class="product-item">
-            <a href="emotion/fear.html">
+        <div class="product-item" data-emotion="공포체">
                 <img src="emotion/fear/fear_result.png" alt="fear" class="product-img" />
-            </a>
         </div>
 
-        <div class="product-item">
-            <a href="emotion/blue.html">
+        <div class="product-item" data-emotion="우울체">
                 <img src="emotion/blue/blue_result.png" alt="blue" class="product-img" />
-            </a>
         </div>
 
-        <div class="product-item">
-            <a href="emotion/anxiety.html">
+        <div class="product-item" data-emotion="불안체">
                 <img src="emotion/anxiety/anxiety_result.png" alt="anxiety" class="product-img" />
-            </a>
         </div>
 
-        <div class="product-item">
-            <a href="emotion/hate.html">
+        <div class="product-item" data-emotion="증오체">
                 <img src="emotion/hate/hate_result.png" alt="hate" class="product-img" />
-            </a>
         </div>
 
-        <div class="product-item">
-            <a href="emotion/anger.html">
+        <div class="product-item" data-emotion="분노체">
                 <img src="emotion/anger/anger_result.png" alt="anger" class="product-img" />
-            </a>
         </div>
 
-        <div class="product-item">
-            <a href="emotion/irritation.html">
+        <div class="product-item" data-emotion="짜증체">
                 <img src="emotion/irritation/irritation_result.png" alt="irritation" class="product-img" />
-            </a>
         </div>
 
-        <div class="product-item">
-            <a href="emotion/discord.html">
+        <div class="product-item" data-emotion="갈등체">
                 <img src="emotion/discord/discord_result.png" alt="discord" class="product-img" />
-            </a>
         </div>
     </div>
 
@@ -143,10 +111,13 @@
 
 
 </body>
-
 <script>
-
+    document.querySelectorAll('.product-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const emotion = item.dataset.emotion;
+            window.location.href = `all_result_detail.html?emotion=${emotion}`;
+        });
+    });
 </script>
-
 
 </html>

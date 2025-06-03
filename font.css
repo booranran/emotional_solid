@@ -1,3 +1,5 @@
+@import "//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css";
+
 /**
  * http://applemusic.tumblr.com/
  * https://jsfiddle.net/xq56dmrh/
@@ -38,7 +40,7 @@
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
 }
 
-/** Bold */ 
+/** Bold */
 @font-face {
   font-family: "San Francisco";
   font-weight: 700;
@@ -52,8 +54,6 @@
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-black-webfont.woff");
 }
 
-@import "//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css";
-
 
 @font-face {
   font-family: 'KoPub Dotum';
@@ -61,24 +61,26 @@
   font-weight: 300;
   src: url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Light.eot);
   src: url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Light.eot?#iefix) format('embedded-opentype'),
-       url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Light.woff) format('woff'),
-       url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Light.ttf) format('truetype');
+    url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Light.woff) format('woff'),
+    url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Light.ttf) format('truetype');
 }
+
 @font-face {
   font-family: 'KoPub Dotum';
   font-style: normal;
   font-weight: 400;
   src: url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Medium.eot);
   src: url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Medium.eot?#iefix) format('embedded-opentype'),
-       url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Medium.woff) format('woff'),
-       url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Medium.ttf) format('truetype');
+    url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Medium.woff) format('woff'),
+    url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Medium.ttf) format('truetype');
 }
+
 @font-face {
   font-family: 'KoPub Dotum';
   font-style: normal;
   font-weight: 700;
   src: url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Bold.eot);
   src: url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Bold.eot?#iefix) format('embedded-opentype'),
-       url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Bold.woff) format('woff'),
-       url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Bold.ttf) format('truetype');
+    url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Bold.woff) format('woff'),
+    url(//cdn.jsdelivr.net/npm/font-kopub@1.0/fonts/KoPubDotum-Bold.ttf) format('truetype');
 }

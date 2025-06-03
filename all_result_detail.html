@@ -1,0 +1,43 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMOOLID</title>
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="event/all_result_detail.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="bookmark-tabs">
+        <button class="bookmark-btn active" data-target="all_result_detail.html">유형 결과</button>
+        <button class="bookmark-btn" data-target="emotion_recommend.html">감정 추천</button>
+    </div>
+
+
+    <div class="content">
+        <section class="result-detail-wrapper">
+        <div class="emotion-card-box">
+            <div class="top-bg-section">
+                <img id="emotion-bg" alt="감정 배경 이미지">
+                <img id="emotion-icon-overlay" alt="감정 아이콘" class="icon-overlay">
+            </div>
+            <div class="bottom-content">
+                <h2 id="emotion-title"></h2>
+                <p id="emotion-detail"></p>
+            </div>
+        </div>
+    </section>
+    </div>
+    
+</body>
+<script type="module" src="event/all_result_detail.js" defer></script>
+<script type="module" src="event/tab-switch.js" defer></script>
+
+
+</html>
