@@ -142,6 +142,7 @@ body {
   padding-left: 8%;  
   padding-top: 3%;
 }
+
 /* 앞부분 (설명 문구) */
 #emotion-title .prefix-text {
   color: #412623; /* 회색 톤 */
@@ -149,7 +150,8 @@ body {
 }
 
 /* 강조되는 감정 단어 */
-#emotion-title, #emotion-match .highlight-text {
+#emotion-title .highlight-text,
+#emotion-match .highlight-text {
   background: linear-gradient(180deg, var(--highlight-color), var(--highlight-color));
   color: white;
   padding: 0.001em 0.001em;
@@ -160,7 +162,8 @@ body {
 }
 
 
-#emotion-detail, #emotion-detail2{
+#emotion-detail,
+#emotion-detail2{
   font-family: 'KoPub Dotum';
   font-weight: 700;
 

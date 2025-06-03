@@ -573,22 +573,8 @@ overlayEl.style.display = data.overlayIcon ? 'block' : 'none';
   document.getElementById('emotion-title').innerHTML = `
         <span class="prefix-text">${data.title.replace(emotion, '')}</span>
         <span class="highlight-text">${emotion}</span>
-      </div>
-    </div>
   `;
 
-  document.getElementById('emotion-detail').innerHTML = data.detail;
-
-
-  const matchEl = document.getElementById('emotion-match');
-  matchEl.innerHTML = `
-    <img src="${data.icon}" alt="${emotion} 아이콘" class="highlight-icon-img">
-    <span class="highlight-text">${emotion}</span>와 잘 어울리는 감정 추천
-  `;
-
-  
-  document.getElementById('emotion-detail2').innerHTML = data.detail2;
-
-}
+  document.getElementById('emotion-detail').innerHTML = data.detail;}
 
 }
